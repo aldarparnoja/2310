@@ -2,11 +2,11 @@
 
 // Faili kirjutamine ja lugemine
 
-function write_read_file() {
+function write_read_file($tekst) {
 
 $file= fopen('tekst.txt',"a") or die("Ei saanud faili avada");
 
-$txt = "Mina olen tekst \n";
+$txt = "\n".htmlspecialchars(substr($tekst, 0, 10));
 
 fwrite($file, $txt);
 fclose($file);
@@ -34,6 +34,6 @@ function counter(){
     echo "Olete külastaja nr: ".$count;
     }
 
-counter();
+//counter();
 
 ?>

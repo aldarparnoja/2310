@@ -17,6 +17,6 @@ $serv = array ('host' => "localhost",'pass' => "", 'user' => "root");
 <p><a href="db_pdo.php">PDO DB</a></p>
 
 <h2>Failioperatsioonid</h2>
-<p><a href="file.php">Faili kirjutamine ja lugemine</a></p>
+<p><a href="input.php">Faili kirjutamine ja lugemine</a></p>
 
 <?php counter(); ?>
