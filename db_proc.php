@@ -4,14 +4,7 @@ require ('conf.php');
 
 go_home();
 
-// Ühenduse tegemine protseduuriga
 
-$conn = mysqli_connect($server,$user,$pass);
-
-if (!$conn) {
-	die("<p>Ühendusega on halvasti ".mysqli_connect_error."</p>");
-}
-echo "<p>Ühendus protseduuriga on olemas!";
 
 // Funktsioon kirje lisamiseks
 
