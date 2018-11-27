@@ -1,9 +1,9 @@
 <?php
 
-//include('../conf.php');
+// echo hash('sha256', 'password');
 
-//$db = db_connect($server, $user, $pass);
 
+session_start();
 
 $conn = mysqli_connect('localhost', 'root', '');
 
@@ -11,15 +11,18 @@ $conn = mysqli_connect('localhost', 'root', '');
 
 if (isset($_POST['sisesta'])) {
     $user = $_POST['kasutaja'];
-    $pass = $_POST['parool'];
+    $pass = md5($_POST['parool']);
 
-    $sql = "SELECT * FROM ms17.users WHERE username='$user' AND password ='$pass'";
+    $sql = "SELECT * FROM ms17.users WHERE username='$user' AND password='$pass'";
 
     $result = mysqli_query($conn, $sql);
     $row = mysqli_fetch_array($result);
 
+    
+    
     if($row) {
-        echo "Teie sisselogimine onnestus";
+        $_SESSION['kasutaja'] = $user;
+        header("Location:thanks.php");
     } else {
         echo "Sisselogimine ei onnestu";
     }
