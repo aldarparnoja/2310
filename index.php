@@ -11,10 +11,13 @@ $serv = array ('host' => "localhost",'pass' => "", 'user' => "root");
 
 ?>
 
-<h2>Andmevbaasid</h2>
+<h2>Andmebaasid</h2>
 <p><a href="db_proc.php">Proc. DB</a></p>
 <p><a href="db_obj.php">Obj. DB</a></p>
 <p><a href="db_pdo.php">PDO DB</a></p>
+
+<p><a href="admin/reg.php">registreeri</a></p>
+<p><a href="admin/index.php">Logi sisse</a></p>
 
 <h2>Failioperatsioonid</h2>
 <p><a href="input.php">Faili kirjutamine ja lugemine</a></p>
