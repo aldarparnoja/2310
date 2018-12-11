@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <body>
     <a href="../index.php">Avalehele</a>
+    <br>
+    <a href="../admin/index.php">Logi sisse</a>
     <h1>Registreeri</h1>
     <form method="post">
         <input type="text" name="kasutaja" placeholder="kasutajanimi">

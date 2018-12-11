@@ -3,7 +3,10 @@
 include 'functions.php';
 
 check_user();
-echo "sisselogimine onnestus";
+
+var_dump($_COOKIE);
+
+echo "sisselogimine onnestus, " . $_COOKIE['user'];
 
 ?>
 

@@ -5,6 +5,11 @@
 
 session_start();
 
+
+// $cookie_name = 'id';
+// $cookie_value = 'MS17';
+// setcookie($cookie_name, $cookie_value, time()+30);
+
 $conn = mysqli_connect('localhost', 'root', '');
 
 //kontroll
@@ -22,6 +27,9 @@ if (isset($_POST['sisesta'])) {
     
     if($row) {
         $_SESSION['kasutaja'] = $user;
+        $cookie_name = 'user';
+        
+        setcookie($cookie_name, $_SESSION['kasutaja'], time()+30);
         header("Location:thanks.php");
     } else {
         echo "Sisselogimine ei onnestu";
